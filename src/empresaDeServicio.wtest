@@ -1,0 +1,18 @@
+import empresasDeServicios.*
+import universidades.*
+import profesionales.*
+
+
+describe "testeando métodos"{
+	method initialize(){
+	const univDeSanMartin = new Universidad(ubicacionEnProvincia="Buenos Aires", horariosRecomendado=3500)
+	const univDeRosario = new Universidad(ubicacionEnProvincia="Santa Fe", horariosRecomendado=2800)
+	const univDeCorrientes = new Universidad(ubicacionEnProvincia="Corrientes", horariosRecomendado=4200)
+	const univDeHurlingham = new Universidad(ubicacionEnProvincia="Buenos Aires", horariosRecomendado=8800)
+	
+	const juana = new ProfesionalVinculado(universidad=univDeRosario)
+	const melina = new ProfesionalAsociado(universidad=univDeCorrientes)
+	const rocio = new ProfesionalLibre(universidad=univDeHurlingham,provincias=["Santa Fe","Córdoba","Buenos Aires"],horarios=5000)
+	const luciana = new ProfesionalLibre(universidad=univDeCorrientes)
+	}
+}
